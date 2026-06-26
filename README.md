@@ -1,10 +1,10 @@
-# Flowtrace — AI-Supervised Data Pipeline Automation
+# Synapse — AI-Powered Data Automation Platform
 
 > Built for the hackathon submission · React + Vite + Tailwind CSS
 
 ## 🚀 Live Demo
 <!-- Replace with your Vercel URL after deploy -->
-**Live:** [https://flowtrace.vercel.app](https://flowtrace.vercel.app)
+**Live:** [https://synapse-landing.vercel.app](https://synapse-landing.vercel.app)
 
 ## 📦 Tech Stack
 
@@ -25,6 +25,7 @@
 - 20% annual discount × regional tariff (USD / EUR / GBP / INR)
 - Zero hardcoded display values — all computed from config object
 - Toggle logic uses only `addEventListener` + direct `textContent` writes
+- Enterprise tier always shows "Contact Sales" regardless of billing/currency toggle
 
 ### Phase 4 — Bento ↔ Accordion + Context Lock
 - Desktop (≥768px): CSS Grid bento — 4 tiles in a 3-column layout
@@ -33,8 +34,14 @@
 - All motion: native CSS `max-height` transitions + WAAPI — **zero animation libraries**
 - Confirmed: no Framer Motion, Radix, HeadlessUI, react-spring in bundle
 
+### Bento Feature Tiles
+1. **Smart Ingestion** — Connects to 200+ sources and auto-normalizes formats on arrival
+2. **Neural Agents** — Autonomous agents monitor data quality and fix anomalies in real time
+3. **Reflex Rules** — Visual rule-builder triggers actions without writing a single script
+4. **Live Pulse** — Real-time dashboards track every pipeline's health and throughput
+
 ### SEO
-- Title, description, OG, Twitter Card meta tags
+- Title, description, OG, Twitter Card meta tags — all set to Synapse copy
 - Semantic HTML: `<header>`, `<main>`, `<section>`, `<article>`, `<blockquote>`, `<footer>`
 - Every SVG/image has `alt` or `aria-label`
 
@@ -73,10 +80,15 @@ src/
 │   ├── Hero.jsx            # Hero with WAAPI parallax + animated SVG pipeline
 │   ├── BentoFeatures.jsx   # Phase 4: Bento↔Accordion with matchMedia
 │   ├── Pricing.jsx         # Phase 3: Vanilla JS island (currency/billing)
-│   ├── SocialProof.jsx     # Stats grid + testimonials
+│   ├── SocialProof.jsx     # Stats grid
 │   └── Footer.jsx          # Semantic footer
 ├── index.css               # Tailwind v4 @theme design system
 └── main.jsx                # React 19 entry point
 public/
 └── svgs/                   # Hackathon-provided SVG asset pack
 ```
+
+## 📊 Social Proof
+- Trusted by 12,000+ teams
+- 4.2M automated runs this month
+- 99.98% pipeline uptime
