@@ -26,7 +26,7 @@ const PRICING_CONFIG = {
         'Community support',
         '7-day data retention',
       ],
-      baseRates: { USD: 15, EUR: 14, GBP: 12, INR: 999 },
+      baseRates: { USD: 15, EUR: 14, INR: 999 },
     },
     {
       id: 'pro',
@@ -45,7 +45,7 @@ const PRICING_CONFIG = {
         '90-day data retention',
         'Custom dashboards',
       ],
-      baseRates: { USD: 59, EUR: 54, GBP: 47, INR: 3999 },
+      baseRates: { USD: 59, EUR: 54, INR: 3999 },
     },
     {
       id: 'enterprise',
@@ -68,10 +68,9 @@ const PRICING_CONFIG = {
     },
   ],
   currencies: {
+    INR: { symbol: '₹', label: 'INR' },
     USD: { symbol: '$', label: 'USD' },
     EUR: { symbol: '€', label: 'EUR' },
-    GBP: { symbol: '£', label: 'GBP' },
-    INR: { symbol: '₹', label: 'INR' },
   },
   annualDiscount: 0.20, // 20% off annual billing
 }
@@ -84,7 +83,7 @@ export default function Pricing() {
     if (!container) return
 
     /* ── Vanilla JS island — builds and controls pricing DOM ── */
-    const state = { currency: 'USD', billing: 'monthly' }
+    const state = { currency: 'INR', billing: 'monthly' }
 
     /* ── Helpers ── */
     const fmt = (currency, amount) => {
