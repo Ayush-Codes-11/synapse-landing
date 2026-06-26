@@ -183,7 +183,7 @@ export default function Pricing() {
     <section id="pricing" aria-labelledby="pricing-heading">
       <div className="container">
         {/* Section header */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+        <div className="section-header-mb" style={{ textAlign: 'center', marginBottom: 56 }}>
           <span className="section-label" style={{ marginBottom: 16, display: 'inline-flex' }}>
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
               <circle cx="5" cy="5" r="5" fill="var(--color-accent)" />

@@ -146,7 +146,7 @@ export default function Hero() {
 
         {/* Stats row */}
         <div
-          className="animate-fade-in-up animate-delay-400"
+          className="animate-fade-in-up animate-delay-400 hero-stats-grid"
           style={{
             display: 'flex',
             gap: 0,
@@ -157,6 +157,7 @@ export default function Hero() {
           {HERO_STATS.map((stat, i) => (
             <div
               key={stat.label}
+              className="hero-stat-cell"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -175,7 +176,7 @@ export default function Hero() {
 
         {/* Hero visual — pipeline diagram SVG */}
         <div
-          className="animate-fade-in-up animate-delay-500"
+          className="animate-fade-in-up animate-delay-500 hero-diagram-wrap"
           style={{ marginTop: 64 }}
         >
           <HeroDiagram />

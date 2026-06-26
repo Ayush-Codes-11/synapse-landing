@@ -138,7 +138,7 @@ export default function Navbar() {
       </div>
 
       <style>{`
-        @media (max-width: 640px) {
+        @media (max-width: 767px) {
           .desktop-nav { display: none !important; }
           .mobile-hamburger { display: flex !important; }
         }

@@ -57,7 +57,7 @@ export default function SocialProof() {
       <div className="container">
 
         {/* Section header */}
-        <div style={{ textAlign: 'center', marginBottom: 60 }}>
+        <div style={{ textAlign: 'center', marginBottom: 60 }} className="section-header-mb">
           <span className="section-label" style={{ marginBottom: 16, display: 'inline-flex' }}>
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
               <circle cx="5" cy="5" r="5" fill="var(--color-accent2)" />
@@ -74,6 +74,7 @@ export default function SocialProof() {
 
         {/* Stats grid */}
         <div
+          className="stats-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -101,6 +102,7 @@ export default function SocialProof() {
 
         {/* Feature highlights strip */}
         <div
+          className="highlights-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',

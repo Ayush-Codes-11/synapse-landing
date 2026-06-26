@@ -268,14 +268,14 @@ a:hover { color: var(--color-accent2); }
 
 /* ── Section spacing ── */
 section {
-  padding: clamp(60px, 8vw, 120px) clamp(20px, 5vw, 80px);
+  padding: clamp(40px, 8vw, 120px) 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 clamp(16px, 4vw, 24px);
 }
 
 /* ── Divider ── */
@@ -317,6 +317,7 @@ section {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   gap: 16px;
+  padding-top: 20px;
   padding-bottom: 16px;        /* room for scrollbar on some browsers */
   /* hide scrollbar visually but keep it functional */
   scrollbar-width: none;
@@ -365,3 +366,104 @@ section {
     gap: 40px;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   Full mobile audit overrides — all inside max-width:767px
+   Desktop layouts are 100% unaffected.
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+  /* ── Hero ── */
+  /* Reduce top padding so hero doesn't eat the full viewport height */
+  #hero {
+    padding-top: 80px !important;
+    padding-bottom: 48px !important;
+    min-height: unset !important;
+  }
+
+  /* CTA buttons: stack vertically and go full width */
+  #hero .btn-primary,
+  #hero .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero stats row: 2×2 grid instead of horizontal flex that wraps awkwardly */
+  .hero-stats-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  /* Tighten each stat cell's padding — 20px×36px is massive on mobile */
+  .hero-stat-cell {
+    padding: 14px 12px !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border);
+  }
+  /* Remove bottom border from last row */
+  .hero-stat-cell:nth-child(3),
+  .hero-stat-cell:nth-child(4) {
+    border-bottom: none;
+  }
+  /* Restore right border only between the two columns */
+  .hero-stat-cell:nth-child(odd) {
+    border-right: 1px solid var(--color-border) !important;
+  }
+
+  /* Compress diagram top margin */
+  .hero-diagram-wrap {
+    margin-top: 32px !important;
+  }
+
+  /* ── Section headers ── */
+  /* Reduce the 56–60px gap below section headings */
+  .section-header-mb {
+    margin-bottom: 32px !important;
+  }
+
+  /* ── SocialProof stats ── */
+  /* auto-fit minmax(200px,1fr) collapses to 1-col on 375px; force 2-col */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Tighten stat card padding on mobile */
+  .stats-grid .glass-card {
+    padding: 18px 12px !important;
+  }
+
+  /* ── SocialProof highlights ── */
+  /* minmax(260px,1fr) → single column on mobile is actually fine here
+     (these are horizontal icon+text rows, not square tiles)
+     But gap is too large */
+  .highlights-grid {
+    gap: 10px !important;
+  }
+
+  /* ── Bento / Features section ── */
+  /* Accordion already kicks in — just tighten the section header margin */
+  #features .container > div:first-child {
+    margin-bottom: 28px !important;
+  }
+
+  /* ── Pricing controls ── */
+  /* Billing toggle + currency switcher wrap fine via flex-wrap — just reduce gap */
+  #pricing-island > div:first-child {
+    gap: 10px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* ── CTA Banner ── */
+  #cta-heading {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+  }
+
+  /* ── General: reduce marginBottom on large stat numbers ── */
+  .stat-number {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
+
