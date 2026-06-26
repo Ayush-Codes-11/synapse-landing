@@ -1,39 +1,51 @@
 /* ============================================================
    Flowtrace — Global Design System (Tailwind CSS v4 @theme)
+   Colors: Official hackathon palette from colorPallet.pdf
+   Fonts:  Inter + JetBrains Mono (from fonts.pdf)
    ============================================================ */
 
 @import "tailwindcss";
 
 @theme {
-  /* ── Color Palette ── */
-  --color-background:    #0A0B0E;
-  --color-surface:       #15171C;
-  --color-surface-alt:   #1E2128;
-  --color-surface-hover: #252830;
+  /* ── Official Hackathon Color Palette ── */
+  /* Nocturnal Expedition #114C5A — primary dark teal */
+  /* Oceanic Noir #172B36 — darkest background */
+  /* Arctic Powder #F1F6F4 — lightest surface */
+  /* Mystic Mint #D9E8E2 — secondary soft */
+  /* Forsythia #FFC801 — primary yellow accent */
+  /* Deep Saffron #FF9932 — secondary orange accent */
 
-  --color-primary:       #5B8CFF;
-  --color-primary-dark:  #3D6BE0;
-  --color-primary-glow:  rgba(91, 140, 255, 0.25);
+  --color-background:    #0D1E25;   /* darker than Oceanic Noir for page bg */
+  --color-surface:       #172B36;   /* Oceanic Noir */
+  --color-surface-alt:   #1E3644;   /* between Oceanic Noir & Nocturnal */
+  --color-surface-hover: #243F50;
 
-  --color-accent:        #7FFFD4;
-  --color-accent-dark:   #5BCFAA;
-  --color-accent-glow:   rgba(127, 255, 212, 0.2);
+  --color-primary:       #114C5A;   /* Nocturnal Expedition */
+  --color-primary-light: #1A6B7D;   /* lighter teal for hover */
+  --color-primary-glow:  rgba(17, 76, 90, 0.35);
 
-  --color-text-primary:  #F4F5F7;
-  --color-text-secondary:#9499A6;
-  --color-text-muted:    #5A5E6B;
+  --color-accent:        #FFC801;   /* Forsythia */
+  --color-accent-dark:   #E6B400;
+  --color-accent-glow:   rgba(255, 200, 1, 0.25);
 
-  --color-border:        #2A2D35;
-  --color-border-bright: #3D4150;
+  --color-accent2:       #FF9932;   /* Deep Saffron */
+  --color-accent2-glow:  rgba(255, 153, 50, 0.2);
+
+  --color-text-primary:  #F1F6F4;   /* Arctic Powder */
+  --color-text-secondary:#D9E8E2;   /* Mystic Mint */
+  --color-text-muted:    #8AABB5;   /* muted teal-grey */
+
+  --color-border:        #1E3644;
+  --color-border-bright: #2A4D60;
 
   --color-success:       #34D399;
-  --color-warning:       #FBBF24;
+  --color-warning:       #FFC801;
   --color-error:         #F87171;
 
-  /* ── Typography ── */
-  --font-display: 'Space Grotesk', sans-serif;
+  /* ── Typography (from fonts.pdf) ── */
+  --font-display: 'Inter', sans-serif;
   --font-body:    'Inter', sans-serif;
-  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+  --font-mono:    'JetBrains Mono', monospace;
 
   /* ── Spacing & Radii ── */
   --radius-sm:  6px;
@@ -43,10 +55,10 @@
   --radius-full: 9999px;
 
   /* ── Shadows / Glows ── */
-  --shadow-card:        0 1px 3px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.3);
-  --shadow-card-hover:  0 4px 24px rgba(0,0,0,0.5), 0 0 40px rgba(91,140,255,0.08);
-  --shadow-primary:     0 0 24px rgba(91,140,255,0.35);
-  --shadow-accent:      0 0 24px rgba(127,255,212,0.25);
+  --shadow-card:        0 1px 3px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-card-hover:  0 4px 24px rgba(0,0,0,0.6), 0 0 40px rgba(255,200,1,0.06);
+  --shadow-primary:     0 0 24px rgba(255,200,1,0.3);
+  --shadow-accent:      0 0 24px rgba(255,153,50,0.25);
 
   /* ── Motion ── */
   --duration-fast:   150ms;
@@ -81,26 +93,26 @@ body {
 /* ── Typography Scale ── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: var(--color-text-primary);
 }
 
-h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.035em; }
-h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); }
-h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
-h4 { font-size: 1.1rem; }
+h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 700; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 600; }
+h4 { font-size: 1.05rem; font-weight: 600; }
 
 p { color: var(--color-text-secondary); line-height: 1.7; }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-a:hover { color: var(--color-accent); }
+a:hover { color: var(--color-accent2); }
 
 /* ── Scrollbar Styling ── */
 ::-webkit-scrollbar { width: 6px; }
@@ -109,17 +121,24 @@ a:hover { color: var(--color-accent); }
   background: var(--color-border-bright);
   border-radius: var(--radius-full);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
 
 /* ── Selection ── */
 ::selection {
-  background: var(--color-primary-glow);
+  background: rgba(255, 200, 1, 0.25);
   color: var(--color-text-primary);
 }
 
 /* ── Utility Classes ── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-teal {
+  background: linear-gradient(135deg, #D9E8E2 0%, #8AABB5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -147,10 +166,10 @@ a:hover { color: var(--color-accent); }
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-accent);
+  color: #0D1E25;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   border-radius: var(--radius-full);
   border: none;
@@ -160,12 +179,14 @@ a:hover { color: var(--color-accent); }
     box-shadow var(--duration-fast) var(--ease-out),
     transform var(--duration-fast) var(--ease-out);
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-accent-dark);
   box-shadow: var(--shadow-primary);
   transform: translateY(-1px);
+  color: #0D1E25;
 }
 
 .btn-primary:active { transform: translateY(0); }
@@ -178,7 +199,7 @@ a:hover { color: var(--color-accent); }
   background: transparent;
   color: var(--color-text-primary);
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border-bright);
@@ -188,12 +209,14 @@ a:hover { color: var(--color-accent); }
     border-color var(--duration-fast) var(--ease-out),
     transform var(--duration-fast) var(--ease-out);
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .btn-ghost:hover {
   background: var(--color-surface-alt);
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
   transform: translateY(-1px);
+  color: var(--color-text-primary);
 }
 
 .section-label {
@@ -201,29 +224,15 @@ a:hover { color: var(--color-accent); }
   align-items: center;
   gap: 6px;
   padding: 5px 14px;
-  background: var(--color-primary-glow);
-  border: 1px solid rgba(91, 140, 255, 0.3);
+  background: rgba(255, 200, 1, 0.1);
+  border: 1px solid rgba(255, 200, 1, 0.3);
   border-radius: var(--radius-full);
   font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-primary);
-}
-
-/* ── Grid noise overlay for depth ── */
-.noise-overlay {
-  position: relative;
-}
-.noise-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 0;
+  color: var(--color-accent);
 }
 
 /* ── Animations ── */
@@ -236,8 +245,8 @@ a:hover { color: var(--color-accent); }
   to   { opacity: 1; }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px var(--color-primary-glow); }
-  50%       { box-shadow: 0 0 40px var(--color-primary-glow), 0 0 60px var(--color-accent-glow); }
+  0%, 100% { box-shadow: 0 0 20px var(--color-accent-glow); }
+  50%       { box-shadow: 0 0 40px var(--color-accent-glow), 0 0 60px var(--color-accent2-glow); }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -247,17 +256,9 @@ a:hover { color: var(--color-accent); }
   0%   { background-position: -200% center; }
   100% { background-position: 200% center; }
 }
-@keyframes draw-line {
-  from { stroke-dashoffset: 1000; }
-  to   { stroke-dashoffset: 0; }
-}
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s var(--ease-out) both;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .animate-delay-100 { animation-delay: 0.1s; }
 .animate-delay-200 { animation-delay: 0.2s; }
@@ -281,17 +282,25 @@ section {
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+  background: linear-gradient(to right, transparent, var(--color-border-bright), transparent);
 }
 
 /* ── Stat counter ── */
 .stat-number {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--color-text-primary), var(--color-text-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-accent);
+}
+
+/* ── Code/mono text ── */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* ── Teal glow bg for cards ── */
+.teal-glow-bg {
+  background: radial-gradient(ellipse at top left, rgba(17,76,90,0.4) 0%, transparent 60%);
 }

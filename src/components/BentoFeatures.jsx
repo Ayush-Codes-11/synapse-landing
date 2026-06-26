@@ -11,12 +11,9 @@ const FEATURES = [
   {
     id: 'ingestion',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="8 17 12 21 16 17"/>
-        <line x1="12" y1="3" x2="12" y2="21"/>
-        <path d="M3 9a9 9 0 0 0 0 6"/>
-        <path d="M21 9a9 9 0 0 1 0 6"/>
-      </svg>
+      <img src="/svgs/arrow-path.svg" width="28" height="28" alt="" aria-hidden="true"
+        style={{ filter: 'brightness(0) saturate(100%) invert(79%) sepia(49%) saturate(500%) hue-rotate(358deg) brightness(105%)' }}
+      />
     ),
     title: 'Smart Ingestion',
     tagline: '200+ sources',
@@ -27,17 +24,16 @@ const FEATURES = [
       'Native connectors for Postgres, BigQuery, Snowflake, S3',
       'Real-time CDC with sub-second latency',
     ],
-    accent: '#5B8CFF',
-    glow: 'rgba(91,140,255,0.15)',
-    span: { col: '1 / 2', row: '1 / 3' }, // tall left tile
+    accent: '#FFC801',
+    glow: 'rgba(255,200,1,0.12)',
+    span: { col: '1 / 2', row: '1 / 3' },
   },
   {
     id: 'agents',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-      </svg>
+      <img src="/svgs/cog-8-tooth.svg" width="28" height="28" alt="" aria-hidden="true"
+        style={{ filter: 'brightness(0) saturate(100%) invert(67%) sepia(79%) saturate(383%) hue-rotate(349deg) brightness(103%)' }}
+      />
     ),
     title: 'AI Agents',
     tagline: 'Always watching',
@@ -48,19 +44,16 @@ const FEATURES = [
       'Root-cause analysis with automated remediation suggestions',
       'Slack / PagerDuty alerting with full context',
     ],
-    accent: '#7FFFD4',
-    glow: 'rgba(127,255,212,0.15)',
+    accent: '#FF9932',
+    glow: 'rgba(255,153,50,0.12)',
     span: { col: '2 / 3', row: '1 / 2' },
   },
   {
     id: 'automation',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="3" width="7" height="7" rx="1"/>
-        <rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/>
-        <path d="M21 14h-4a3 3 0 0 0-3 3v4"/>
-      </svg>
+      <img src="/svgs/link.svg" width="28" height="28" alt="" aria-hidden="true"
+        style={{ filter: 'brightness(0) saturate(100%) invert(86%) sepia(16%) saturate(284%) hue-rotate(92deg) brightness(101%)' }}
+      />
     ),
     title: 'Automation Rules',
     tagline: 'No scripts needed',
@@ -71,16 +64,16 @@ const FEATURES = [
       'Conditional branching, loops, and rollback support',
       'Version-controlled rule history with 1-click restore',
     ],
-    accent: '#A78BFA',
-    glow: 'rgba(167,139,250,0.15)',
+    accent: '#D9E8E2',
+    glow: 'rgba(217,232,226,0.1)',
     span: { col: '2 / 3', row: '2 / 3' },
   },
   {
     id: 'analytics',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
+      <img src="/svgs/arrow-trending-up.svg" width="28" height="28" alt="" aria-hidden="true"
+        style={{ filter: 'brightness(0) saturate(100%) invert(79%) sepia(49%) saturate(500%) hue-rotate(358deg) brightness(105%)' }}
+      />
     ),
     title: 'Live Analytics',
     tagline: 'Real-time insights',
@@ -91,9 +84,9 @@ const FEATURES = [
       'Custom KPI widgets with threshold alerting',
       'RBAC-gated views per team and project',
     ],
-    accent: '#FB923C',
-    glow: 'rgba(251,146,60,0.15)',
-    span: { col: '3 / 4', row: '1 / 3' }, // tall right tile
+    accent: '#FFC801',
+    glow: 'rgba(255,200,1,0.12)',
+    span: { col: '3 / 4', row: '1 / 3' },
   },
 ]
 

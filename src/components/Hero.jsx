@@ -56,7 +56,7 @@ export default function Hero() {
           left: '10%',
           width: 500,
           height: 500,
-          background: 'radial-gradient(circle, rgba(91,140,255,0.18) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(17,76,90,0.35) 0%, transparent 70%)',
           borderRadius: '50%',
           pointerEvents: 'none',
           filter: 'blur(40px)',
@@ -71,7 +71,7 @@ export default function Hero() {
           right: '5%',
           width: 600,
           height: 600,
-          background: 'radial-gradient(circle, rgba(127,255,212,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255,200,1,0.12) 0%, transparent 70%)',
           borderRadius: '50%',
           pointerEvents: 'none',
           filter: 'blur(60px)',
@@ -86,8 +86,8 @@ export default function Hero() {
           position: 'absolute',
           inset: 0,
           backgroundImage: `
-            linear-gradient(rgba(42,45,53,0.4) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(42,45,53,0.4) 1px, transparent 1px)
+            linear-gradient(rgba(17,76,90,0.25) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(17,76,90,0.25) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
           maskImage: 'radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%)',
@@ -231,10 +231,10 @@ function HeroDiagram() {
         <path d="M520 90 L580 90" stroke="#2A2D35" strokeWidth="2" strokeDasharray="4 3" />
 
         {/* Animated flow dots */}
-        <circle r="4" fill="#5B8CFF" opacity="0.9">
+        <circle r="4" fill="#FFC801" opacity="0.9">
           <animateMotion dur="2.4s" repeatCount="indefinite" path="M160 90 L220 90 L340 90 L400 90 L520 90 L580 90 L700 90" />
         </circle>
-        <circle r="3" fill="#7FFFD4" opacity="0.7">
+        <circle r="3" fill="#FF9932" opacity="0.7">
           <animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M160 90 L220 90 L340 90 L400 90 L520 90 L580 90 L700 90" />
         </circle>
 
@@ -242,11 +242,11 @@ function HeroDiagram() {
         {PIPELINE_NODES.map((node, i) => (
           <g key={node.label} transform={`translate(${node.x}, ${node.y})`}>
             <rect x="-60" y="-34" width="120" height="68" rx="12"
-              fill={node.active ? 'rgba(91,140,255,0.12)' : 'rgba(30,33,40,0.8)'}
-              stroke={node.active ? 'rgba(91,140,255,0.5)' : '#2A2D35'}
+              fill={node.active ? 'rgba(255,200,1,0.12)' : 'rgba(17,43,54,0.8)'}
+              stroke={node.active ? 'rgba(255,200,1,0.5)' : '#1E3644'}
               strokeWidth="1.5"
             />
-            <text x="0" y="-10" textAnchor="middle" fontSize="18" fill={node.active ? '#5B8CFF' : '#9499A6'} aria-hidden="true">
+            <text x="0" y="-10" textAnchor="middle" fontSize="18" fill={node.active ? '#FFC801' : '#8AABB5'} aria-hidden="true">
               {node.icon}
             </text>
             <text x="0" y="10" textAnchor="middle" fontSize="11" fontWeight="600" fill="#F4F5F7" fontFamily="Inter, sans-serif">
@@ -263,7 +263,7 @@ function HeroDiagram() {
       <div style={{
         marginTop: 16,
         height: 3,
-        background: 'linear-gradient(90deg, transparent, #5B8CFF, #7FFFD4, transparent)',
+        background: 'linear-gradient(90deg, transparent, #FFC801, #FF9932, transparent)',
         backgroundSize: '200% auto',
         animation: 'shimmer 2.5s linear infinite',
         borderRadius: 'var(--radius-full)',
@@ -278,3 +278,6 @@ const PIPELINE_NODES = [
   { x: 460, y: 90, label: 'Route',   sub: 'Smart rules',  icon: '⚡', active: true },
   { x: 640, y: 90, label: 'Deliver', sub: 'Any target',   icon: '✓', active: false },
 ]
+
+const ACTIVE_COLOR = '#FFC801'
+const FLOW_COLOR = '#FF9932'
