@@ -14,7 +14,7 @@ const PRICING_CONFIG = {
     {
       id: 'starter',
       name: 'Starter',
-      tagline: 'For solo builders & small teams',
+      tagline: 'For solo builders and small teams testing automation',
       featured: false,
       cta: 'Start for Free',
       ctaHref: '#',
@@ -31,7 +31,7 @@ const PRICING_CONFIG = {
     {
       id: 'pro',
       name: 'Pro',
-      tagline: 'For growing teams in production',
+      tagline: 'For growing teams running production pipelines',
       featured: true,
       cta: 'Start Pro Trial',
       ctaHref: '#',
@@ -50,10 +50,10 @@ const PRICING_CONFIG = {
     {
       id: 'enterprise',
       name: 'Enterprise',
-      tagline: 'Custom scale, dedicated support',
+      tagline: 'Custom volume, dedicated support, SSO',
       featured: false,
       cta: 'Contact Sales',
-      ctaHref: 'mailto:sales@flowtrace.app',
+      ctaHref: 'mailto:sales@synapse.app',
       features: [
         'Everything in Pro',
         'Unlimited events',

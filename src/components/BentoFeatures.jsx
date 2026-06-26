@@ -18,7 +18,7 @@ const FEATURES = [
     title: 'Smart Ingestion',
     tagline: '200+ sources',
     description:
-      'Connects to databases, APIs, SaaS tools, and event streams. Auto-normalises schemas on arrival — no ETL scripting required.',
+      'Connects to 200+ sources and auto-normalizes formats on arrival.',
     detail: [
       'Auto-schema detection across JSON, CSV, Parquet, Avro',
       'Native connectors for Postgres, BigQuery, Snowflake, S3',
@@ -35,10 +35,10 @@ const FEATURES = [
         style={{ filter: 'brightness(0) saturate(100%) invert(67%) sepia(79%) saturate(383%) hue-rotate(349deg) brightness(103%)' }}
       />
     ),
-    title: 'AI Agents',
+    title: 'Neural Agents',
     tagline: 'Always watching',
     description:
-      'Autonomous agents monitor data quality 24/7, detect anomalies, and self-correct — without human intervention.',
+      'Autonomous agents monitor data quality and fix anomalies in real time.',
     detail: [
       'LLM-powered anomaly detection with < 0.1% false-positive rate',
       'Root-cause analysis with automated remediation suggestions',
@@ -55,10 +55,10 @@ const FEATURES = [
         style={{ filter: 'brightness(0) saturate(100%) invert(86%) sepia(16%) saturate(284%) hue-rotate(92deg) brightness(101%)' }}
       />
     ),
-    title: 'Automation Rules',
+    title: 'Reflex Rules',
     tagline: 'No scripts needed',
     description:
-      'Visual rule-builder lets anyone trigger transformations, joins, and routing logic without writing a single line of code.',
+      'Visual rule-builder triggers actions without writing a single script.',
     detail: [
       'Drag-and-drop rule composer with 80+ pre-built templates',
       'Conditional branching, loops, and rollback support',
@@ -75,10 +75,10 @@ const FEATURES = [
         style={{ filter: 'brightness(0) saturate(100%) invert(79%) sepia(49%) saturate(500%) hue-rotate(358deg) brightness(105%)' }}
       />
     ),
-    title: 'Live Analytics',
+    title: 'Live Pulse',
     tagline: 'Real-time insights',
     description:
-      'Real-time dashboards surface pipeline health, throughput trends, and data freshness at a glance — updated every second.',
+      'Real-time dashboards track every pipeline’s health and throughput.',
     detail: [
       'Sub-second dashboard refresh with WebSocket streaming',
       'Custom KPI widgets with threshold alerting',

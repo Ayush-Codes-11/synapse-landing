@@ -5,12 +5,12 @@
 const STATS = [
   {
     value: '12,000+',
-    label: 'Teams worldwide',
+    label: 'Trusted by 12,000+ teams',
     icon: <img src="/svgs/cube-16-solid.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(82%) sepia(33%) saturate(400%) hue-rotate(358deg) brightness(104%)' }} />,
   },
   {
     value: '4.2M',
-    label: 'Automated runs/mo',
+    label: 'Automated runs this month',
     icon: <img src="/svgs/arrow-path.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(67%) sepia(79%) saturate(383%) hue-rotate(349deg) brightness(103%)' }} />,
   },
   {
@@ -80,7 +80,7 @@ export default function SocialProof() {
             Powering pipelines at scale
           </h2>
           <p style={{ maxWidth: 500, margin: '0 auto', fontSize: '1.05rem' }}>
-            From solo builders to enterprise data teams — Flowtrace runs where your data runs.
+            From solo builders to enterprise data teams — Synapse runs where your data runs.
           </p>
         </div>
 

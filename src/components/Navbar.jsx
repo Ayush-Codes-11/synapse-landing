@@ -35,7 +35,7 @@ export default function Navbar() {
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           <LogoMark />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-text-primary)', letterSpacing: '-0.03em' }}>
-            flowtrace
+            Synapse
           </span>
         </a>
 
@@ -149,7 +149,7 @@ export default function Navbar() {
 
 function LogoMark() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Flowtrace logo mark">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Synapse logo mark">
       <rect width="32" height="32" rx="9" fill="url(#logo-grad)" />
       <path d="M8 11C8 11 11 9 14 11C17 13 20 9 23 11" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
       <path d="M8 16C8 16 11 14 14 16C17 18 20 14 23 16" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>

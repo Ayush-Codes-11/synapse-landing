@@ -103,7 +103,7 @@ export default function Hero() {
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
               <circle cx="5" cy="5" r="5" fill="var(--color-accent)" />
             </svg>
-            AI-Powered Pipeline Automation
+            AI-Powered Data Automation
           </span>
         </div>
 
@@ -112,8 +112,7 @@ export default function Hero() {
           className="animate-fade-in-up animate-delay-100"
           style={{ marginBottom: 28, maxWidth: 900, margin: '0 auto 28px' }}
         >
-          Turn scattered pipelines into{' '}
-          <span className="gradient-text">self-running workflows</span>
+          <span className="gradient-text">Synapse</span>
         </h1>
 
         {/* Subhead */}
@@ -127,7 +126,6 @@ export default function Hero() {
           }}
         >
           AI agents that ingest, clean, and route your data — so your team stops babysitting pipelines.
-          Connect once, automate everything.
         </p>
 
         {/* CTA Buttons */}
@@ -188,7 +186,7 @@ export default function Hero() {
 }
 
 const HERO_STATS = [
-  { value: '12,000+', label: 'Teams using Flowtrace' },
+  { value: '12,000+', label: 'Teams using Synapse' },
   { value: '4.2M',    label: 'Automated runs / mo' },
   { value: '99.98%',  label: 'Pipeline uptime' },
   { value: '200+',    label: 'Data sources' },

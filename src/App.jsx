@@ -47,7 +47,7 @@ function CTABanner() {
       {/* Background glow */}
       <div aria-hidden="true" style={{
         position: 'absolute', inset: 0,
-        background: 'radial-gradient(ellipse 70% 80% at 50% 50%, rgba(91,140,255,0.07) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse 70% 80% at 50% 50%, rgba(17,76,90,0.15) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -57,7 +57,7 @@ function CTABanner() {
           <span className="gradient-text">your pipelines?</span>
         </h2>
         <p style={{ fontSize: '1.05rem', maxWidth: 480, margin: '0 auto 36px', lineHeight: 1.7 }}>
-          Join 12,000+ teams who automated their data ops with Flowtrace. Free to start, no credit card required.
+          Join 12,000+ teams who automated their data ops with Synapse. Free to start, no credit card required.
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 36px' }}>
@@ -66,7 +66,7 @@ function CTABanner() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
-          <a href="mailto:sales@flowtrace.app" className="btn-ghost" style={{ fontSize: '1rem', padding: '14px 36px' }}>
+          <a href="mailto:sales@synapse.app" className="btn-ghost" style={{ fontSize: '1rem', padding: '14px 36px' }}>
             Talk to Sales
           </a>
         </div>

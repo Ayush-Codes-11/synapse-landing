@@ -22,24 +22,24 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="Flowtrace logo">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="Synapse logo">
                 <rect width="32" height="32" rx="8" fill="url(#footer-logo-grad)" />
                 <path d="M8 11C8 11 11 9 14 11C17 13 20 9 23 11" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.6"/>
                 <path d="M8 16C8 16 11 14 14 16C17 18 20 14 23 16" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
                 <path d="M8 21C8 21 11 19 14 21C17 23 20 19 23 21" stroke="#7FFFD4" strokeWidth="2" strokeLinecap="round"/>
                 <defs>
                   <linearGradient id="footer-logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#5B8CFF"/>
-                    <stop offset="100%" stopColor="#3D6BE0"/>
+                    <stop offset="0%" stopColor="#114C5A"/>
+                    <stop offset="100%" stopColor="#172B36"/>
                   </linearGradient>
                 </defs>
               </svg>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.15rem', color: 'var(--color-text-primary)', letterSpacing: '-0.03em' }}>
-                flowtrace
+                Synapse
               </span>
             </div>
             <p style={{ fontSize: '0.85rem', maxWidth: 220, lineHeight: 1.6 }}>
-              AI-supervised data pipeline automation. Connect once, automate everything.
+              AI-powered data automation. Wire it once, let it think for itself.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>
-            © {year} Flowtrace. All rights reserved.
+            © {year} Synapse. All rights reserved.
           </p>
           <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>
             Built with ♥ using React + Vite + Tailwind CSS
