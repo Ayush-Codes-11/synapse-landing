@@ -8,7 +8,7 @@
 
 ## 🚀 Live Demo
 
-**Live:** <!-- Add Vercel URL here after deploy -->
+**Live:** [https://synapse-landing-tau.vercel.app](https://synapse-landing-tau.vercel.app)
 **Repo:** [github.com/Ayush-Codes-11/synapse-landing](https://github.com/Ayush-Codes-11/synapse-landing)
 
 ---
@@ -266,7 +266,7 @@ npm run build
 | Criterion | Status | Detail |
 |---|---|---|
 | Public GitHub repo | ✅ | github.com/Ayush-Codes-11/synapse-landing |
-| Live deploy | ✅ | Vercel (add URL) |
+| Live deploy | ✅ | [synapse-landing-tau.vercel.app](https://synapse-landing-tau.vercel.app) |
 | React / Vite framework | ✅ | React 19, Vite 8 |
 | Tailwind CSS | ✅ | v4 CSS-first config |
 | No banned animation libs | ✅ | Audited: only CSS + WAAPI |
