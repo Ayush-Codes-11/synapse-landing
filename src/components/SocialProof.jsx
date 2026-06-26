@@ -3,10 +3,26 @@
    ───────────────────────────────────────────────────────────────── */
 
 const STATS = [
-  { value: '12,000+', label: 'Teams worldwide',    icon: '👥' },
-  { value: '4.2M',    label: 'Automated runs/mo',  icon: '⚡' },
-  { value: '99.98%',  label: 'Pipeline uptime',    icon: '✦' },
-  { value: '<50ms',   label: 'Median latency',     icon: '⏱' },
+  {
+    value: '12,000+',
+    label: 'Teams worldwide',
+    icon: <img src="/svgs/cube-16-solid.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(82%) sepia(33%) saturate(400%) hue-rotate(358deg) brightness(104%)' }} />,
+  },
+  {
+    value: '4.2M',
+    label: 'Automated runs/mo',
+    icon: <img src="/svgs/arrow-path.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(67%) sepia(79%) saturate(383%) hue-rotate(349deg) brightness(103%)' }} />,
+  },
+  {
+    value: '99.98%',
+    label: 'Pipeline uptime',
+    icon: <img src="/svgs/arrow-trending-up.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(82%) sepia(33%) saturate(400%) hue-rotate(358deg) brightness(104%)' }} />,
+  },
+  {
+    value: '<50ms',
+    label: 'Median latency',
+    icon: <img src="/svgs/chart-pie.svg" width="28" height="28" alt="" aria-hidden="true" style={{ filter: 'brightness(0) saturate(100%) invert(67%) sepia(79%) saturate(383%) hue-rotate(349deg) brightness(103%)' }} />,
+  },
 ]
 
 const TESTIMONIALS = [
@@ -56,7 +72,7 @@ export default function SocialProof() {
         <div style={{ textAlign: 'center', marginBottom: 60 }}>
           <span className="section-label" style={{ marginBottom: 16, display: 'inline-flex' }}>
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-              <circle cx="5" cy="5" r="5" fill="#A78BFA" />
+              <circle cx="5" cy="5" r="5" fill="var(--color-accent2)" />
             </svg>
             Trusted by teams
           </span>
@@ -87,7 +103,7 @@ export default function SocialProof() {
                 textAlign: 'center',
               }}
             >
-              <div style={{ fontSize: '1.8rem', marginBottom: 10 }} aria-hidden="true">{stat.icon}</div>
+              <div style={{ height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }} aria-hidden="true">{stat.icon}</div>
               <div className="stat-number">{stat.value}</div>
               <div style={{ fontSize: '0.83rem', color: 'var(--color-text-muted)', marginTop: 6, fontWeight: 500 }}>
                 {stat.label}
