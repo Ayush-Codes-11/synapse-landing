@@ -119,15 +119,15 @@ export default function BentoFeatures() {
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <span className="section-label" style={{ marginBottom: 16, display: 'inline-flex' }}>
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-              <circle cx="5" cy="5" r="5" fill="var(--color-primary)" />
+              <circle cx="5" cy="5" r="5" fill="var(--color-accent)" />
             </svg>
-            Platform Features
+            How Synapse Works
           </span>
           <h2 id="features-heading" style={{ marginTop: 14, marginBottom: 16 }}>
-            Everything your data team needs
+            One nervous system for all your data
           </h2>
           <p style={{ maxWidth: 540, margin: '0 auto', fontSize: '1.05rem' }}>
-            A unified platform that replaces the patchwork of glue-code scripts keeping your pipelines alive.
+            Four AI-powered modules that wire together in minutes — replacing every glue-code script your team wrote at 2am.
           </p>
         </div>
 
