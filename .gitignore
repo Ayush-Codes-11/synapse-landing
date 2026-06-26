@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Temp extraction artefacts
+svgs-extracted/
+*_preview.jpg
+*_preview.png
+fonts_preview.*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
