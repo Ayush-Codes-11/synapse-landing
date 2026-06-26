@@ -271,6 +271,7 @@ function buildHTML() {
 
     return `
       <article
+        class="pricing-card-snap"
         style="
           background:${isFeatured ? 'linear-gradient(160deg, #1E2128 0%, #171B24 100%)' : 'var(--color-surface)'};
           border:1px solid ${isFeatured ? 'rgba(91,140,255,0.4)' : 'var(--color-border)'};
@@ -389,13 +390,8 @@ function buildHTML() {
       </div>
     </div>
 
-    <!-- Tier grid -->
-    <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:16px;
-      align-items:center;
-    " role="list">
+    <!-- Tier grid: horizontal scroll on mobile, 3-col grid on desktop (via .pricing-scroll-track in index.css) -->
+    <div class="pricing-scroll-track" role="list">
       ${tierCards}
     </div>
 

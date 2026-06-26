@@ -1,5 +1,5 @@
 /* ============================================================
-   Flowtrace — Global Design System (Tailwind CSS v4 @theme)
+   Synapse — Global Design System (Tailwind CSS v4 @theme)
    Colors: Official hackathon palette from colorPallet.pdf
    Fonts:  Inter + JetBrains Mono (from fonts.pdf)
    ============================================================ */
@@ -303,4 +303,65 @@ section {
 /* ── Teal glow bg for cards ── */
 .teal-glow-bg {
   background: radial-gradient(ellipse at top left, rgba(17,76,90,0.4) 0%, transparent 60%);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Mobile layout fixes
+   ───────────────────────────────────────────────────────────────── */
+
+/* Pricing cards: horizontal scroll on mobile, 3-col grid on desktop */
+.pricing-scroll-track {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+  padding-bottom: 16px;        /* room for scrollbar on some browsers */
+  /* hide scrollbar visually but keep it functional */
+  scrollbar-width: none;
+  align-items: stretch;
+}
+.pricing-scroll-track::-webkit-scrollbar { display: none; }
+
+.pricing-card-snap {
+  scroll-snap-align: start;
+  flex: 0 0 min(82vw, 300px);  /* ~82% viewport width, cap at 300px */
+  min-width: 260px;
+}
+
+@media (min-width: 768px) {
+  .pricing-scroll-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+    align-items: center;
+  }
+  .pricing-card-snap {
+    flex: unset;
+    min-width: unset;
+  }
+}
+
+/* Footer columns: 2-col minimum on mobile, 4-col on desktop */
+.footer-cols-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* brand + first link col on mobile */
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 480px) {
+  .footer-cols-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-cols-grid {
+    grid-template-columns: 1.6fr repeat(3, 1fr);  /* brand wider + 3 link cols */
+    gap: 40px;
+  }
 }

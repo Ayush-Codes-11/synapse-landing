@@ -88,6 +88,9 @@ synapse-landing/
 - Full `@theme { }` block with all 6 hackathon palette tokens
 - Inter + JetBrains Mono loaded from Google Fonts
 - Utility classes: `.btn-primary`, `.btn-ghost`, `.glass-card`, `.gradient-text`, `.section-label`, `.stat-number`, `.container`, `.divider`, `.animate-fade-in-up`
+- **`.pricing-scroll-track`** — mobile: `display:flex; overflow-x:auto; scroll-snap-type:x mandatory`. Desktop (≥768px): overridden to `display:grid; grid-template-columns:repeat(3,1fr)` via `@media`
+- **`.pricing-card-snap`** — `scroll-snap-align:start; flex:0 0 min(82vw,300px)` on mobile; `flex:unset` on desktop
+- **`.footer-cols-grid`** — `grid-template-columns:1fr 1fr` on mobile (≥0px), `repeat(2,1fr)` on ≥480px, `1.6fr repeat(3,1fr)` on ≥768px
 - WAAPI keyframe: `@keyframes shimmer` for pipeline progress bar
 - Scroll-behaviour, font smoothing, focus-visible ring all set globally
 
@@ -224,7 +227,51 @@ const price = tier.baseRates
 - Copyright: `© {currentYear} Synapse. All rights reserved.`
 - All links are `<a>` elements with `href="#"` placeholders
 
-### Phase 8 — SEO + Meta (`index.html`)
+### Mobile Responsive Layout
+
+**Pricing cards (mobile → horizontal scroll, desktop → 3-col grid):**
+```css
+/* index.css */
+.pricing-scroll-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.pricing-card-snap {
+  scroll-snap-align: start;
+  flex: 0 0 min(82vw, 300px);   /* never shrinks to full-width on mobile */
+  min-width: 260px;
+}
+@media (min-width: 768px) {
+  .pricing-scroll-track {
+    display: grid;              /* back to 3-col grid on desktop */
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+  .pricing-card-snap { flex: unset; min-width: unset; }
+}
+```
+
+**Footer columns (minimum 2-col on mobile, 4-col on desktop):**
+```css
+.footer-cols-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;             /* 2-col minimum — never collapses to 1 */
+}
+@media (min-width: 768px) {
+  .footer-cols-grid {
+    grid-template-columns: 1.6fr repeat(3, 1fr); /* brand wide + 3 link cols */
+  }
+}
+```
+
+> Desktop layout is **completely unaffected** — all mobile overrides are inside `@media (max-width: 767px)` implicitly (by defaulting mobile-first and overriding at 768px+). The vanilla JS island applies these classes via `class="pricing-scroll-track"` / `class="pricing-card-snap"` in `buildHTML()`; the Footer React component uses `className="footer-cols-grid"`.
+
+---
+
 
 ```html
 <title>Synapse — AI-Powered Data Automation Platform</title>
@@ -277,4 +324,4 @@ npm run build
 | Hackathon SVG assets | ✅ | All 14 SVGs used across components |
 | SEO meta / OG tags | ✅ | Title, description, OG, Twitter Card |
 | Semantic HTML | ✅ | header, main, section, article, footer |
-| Mobile responsive | ✅ | Accordion on mobile, bento on desktop |
+| Mobile responsive | ✅ | Pricing: horizontal scroll+snap on mobile, 3-col grid on desktop. Footer: min 2-col on mobile, 4-col on desktop |

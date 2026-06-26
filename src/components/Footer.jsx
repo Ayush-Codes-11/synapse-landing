@@ -11,14 +11,7 @@ export default function Footer() {
       aria-label="Site footer"
     >
       <div className="container">
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-            gap: 40,
-            marginBottom: 48,
-          }}
-        >
+        <div className="footer-cols-grid">
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
