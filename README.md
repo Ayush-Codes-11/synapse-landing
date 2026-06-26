@@ -229,6 +229,11 @@ const price = tier.baseRates
 
 ### Mobile Responsive Layout
 
+Recent refinements improved the experience on smaller screens:
+- The navbar now switches to the mobile menu at the same breakpoint as the rest of the landing page for smoother tablet/landscape-phone behavior.
+- The pricing cards now reserve extra top spacing so the featured badge stays fully visible inside the mobile scroll container.
+- The pricing section header uses the shared mobile spacing utility so its title spacing matches the rest of the page.
+
 **Pricing cards (mobile → horizontal scroll, desktop → 3-col grid):**
 ```css
 /* index.css */
